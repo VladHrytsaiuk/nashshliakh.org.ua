@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: замініть домен
+Sitemap: https://nashshliakh.org.ua/sitemap.xml
