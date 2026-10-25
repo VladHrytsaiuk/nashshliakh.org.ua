@@ -54,7 +54,7 @@ const FUND = {
 
   // Контакти
   phone: '',                       // TODO: '+380 44 000 00 00'
-  email: '',                       // TODO: 'info@nashshliakh.org.ua'
+  email: '',                       // TODO: 'info@nashshliakh.com.ua'
   address: { uk: '', en: '' },     // TODO: { uk: 'м. Київ, вул. …', en: '… St., Kyiv, Ukraine' }
 
   // Посилання

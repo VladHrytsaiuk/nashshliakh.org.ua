@@ -64,7 +64,6 @@ grep -rn "TODO" --include="*.html" --include="*.js" --include="*.txt" --include=
 
 | Що | Де |
 |---|---|
-| **Домен** `nashshliakh.org.ua` | `index.html`: `canonical`, `og:url`, `og:image`, `twitter:image`, JSON-LD; `robots.txt`; `sitemap.xml` |
 | **Головна ілюстрація** | `images/main.jpg` (1088×976). Новий файл тих самих пропорцій можна покласти під тим самим ім'ям |
 | **Фото команди** | `index.html`, секція `#about`: замініть `<div class="photo-placeholder">` на `<img>` (приклад — у коментарі поруч). Рекомендовано 1200×900, JPG/WebP до 200 КБ |
 | **Політика конфіденційності** | `index.html` (`<dialog id="privacy-dialog">`) + `privacy.body` у `script.js`. Узгодьте текст з юристом |
@@ -81,7 +80,7 @@ grep -rn "TODO" --include="*.html" --include="*.js" --include="*.txt" --include=
 
 [Web3Forms](https://web3forms.com) — безкоштовний сервіс, який пересилає заявки з форми на пошту, без власного бекенду.
 
-1. Відкрийте <https://web3forms.com>, введіть email, на який мають приходити заявки (напр. `info@nashshliakh.org.ua`), і натисніть **Create Access Key**.
+1. Відкрийте <https://web3forms.com>, введіть email, на який мають приходити заявки (напр. `info@nashshliakh.com.ua`), і натисніть **Create Access Key**.
 2. Ключ прийде листом. Вставте його на початку `script.js`:
    ```js
    const WEB3FORMS_ACCESS_KEY = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
@@ -128,7 +127,7 @@ grep -rn "TODO" --include="*.html" --include="*.js" --include="*.txt" --include=
 
 ### Прив'язка власного домену
 
-1. **Settings → Pages → Custom domain**: введіть `nashshliakh.org.ua` і натисніть **Save**. GitHub створить у репозиторії файл `CNAME`.
+1. **Settings → Pages → Custom domain**: введіть `nashshliakh.com.ua` і натисніть **Save**. GitHub створить у репозиторії файл `CNAME`.
 2. У DNS-панелі реєстратора домену додайте записи:
 
    | Тип | Ім'я | Значення |
@@ -140,7 +139,7 @@ grep -rn "TODO" --include="*.html" --include="*.js" --include="*.txt" --include=
    | `AAAA` | `@` | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` (необов'язково, для IPv6) |
    | `CNAME` | `www` | `<user>.github.io` |
 
-3. Зачекайте, поки оновиться DNS (від кількох хвилин до 24 годин). Перевірити можна командою `dig nashshliakh.org.ua +short`.
+3. Зачекайте, поки оновиться DNS (від кількох хвилин до 24 годин). Перевірити можна командою `dig nashshliakh.com.ua +short`.
 4. Коли домен підтвердиться, увімкніть **Enforce HTTPS** у тих самих налаштуваннях Pages.
 5. Перевірте, що домен у `canonical`, `og:*`, JSON-LD, `robots.txt` і `sitemap.xml` збігається з реальним.
 

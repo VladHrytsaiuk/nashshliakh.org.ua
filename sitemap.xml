@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: замініть домен і дату останнього оновлення -->
+<!-- Оновлюйте <lastmod> після суттєвих змін на сайті -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nashshliakh.org.ua/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <loc>https://nashshliakh.com.ua/</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
 </urlset>

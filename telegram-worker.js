@@ -11,7 +11,7 @@
  *   4. Settings → Variables and Secrets:
  *        TELEGRAM_BOT_TOKEN  (Secret)  — токен бота
  *        TELEGRAM_CHAT_ID    (Secret)  — id чату, напр. -1001234567890
- *        ALLOWED_ORIGIN      (Text)    — https://nashshliakh.org.ua  (можна кілька через кому)
+ *        ALLOWED_ORIGIN      (Text)    — https://nashshliakh.com.ua  (можна кілька через кому)
  *   5. У script.js: TELEGRAM_WORKER_URL = 'https://<назва>.<субдомен>.workers.dev',
  *      FORM_PROVIDER = 'telegram'.
  *
