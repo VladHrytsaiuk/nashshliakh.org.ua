@@ -113,7 +113,7 @@ const I18N = {
     'about.v2d': 'Публікуємо чеки, виписки й фотозвіти.',
     'about.v3t': 'Швидкість',
     'about.v3d': 'Реагуємо на запити без зайвої бюрократії.',
-    'about.photo': 'Тут буде фото команди',
+    'about.photo': 'Чекаємо фото команди від фотографа',
     'about.caption': 'Команда фонду на складі у Києві',
 
     'dir.eyebrow': 'Напрями діяльності',
@@ -293,7 +293,7 @@ const I18N = {
     'about.v2d': 'We publish receipts, statements and photo reports.',
     'about.v3t': 'Fast',
     'about.v3d': 'We respond to requests without red tape.',
-    'about.photo': 'Team photo goes here',
+    'about.photo': 'Team photo coming soon from our photographer',
     'about.caption': 'Our team at the warehouse in Kyiv',
 
     'dir.eyebrow': 'What we do',
