@@ -111,6 +111,9 @@ button { cursor: pointer; }
 
 .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
+/* Блоки без даних (див. FUND у script.js) мають атрибут hidden — він сильніший за display у компонентах */
+[hidden] { display: none !important; }
+
 .icon {
   width: 1.25em;
   height: 1.25em;
@@ -451,10 +454,13 @@ main { position: relative; overflow-x: clip; }
 .hero__trust .icon { color: var(--green-700); }
 
 .hero__art { position: relative; }
-.hero__svg {
+.hero__img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1088 / 976;
+  object-fit: cover;
   border-radius: 40px;
+  background: var(--blue-100);
   box-shadow: var(--shadow-lg);
 }
 
@@ -598,13 +604,9 @@ main { position: relative; overflow-x: clip; }
 @media (min-width: 640px) { .panel { padding: 32px; } }
 
 .help { display: grid; gap: 20px; }
-.help__side { display: grid; gap: 20px; align-content: start; }
-@media (min-width: 720px) {
-  .help__side { grid-template-columns: 1fr 1fr; }
-}
 @media (min-width: 1024px) {
-  .help { grid-template-columns: 1.35fr 1fr; }
-  .help__side { grid-template-columns: 1fr; }
+  /* Реквізити + QR поруч; якщо є лише щось одне — на всю ширину */
+  .help:has(> :not([hidden]) + :not([hidden])) { grid-template-columns: 1.35fr 1fr; }
 }
 
 /* Реквізити */
@@ -662,9 +664,19 @@ main { position: relative; overflow-x: clip; }
 }
 .qr__code svg { width: 100%; height: 100%; }
 .qr__hint { color: var(--muted); font-size: .9375rem; }
+.qr .btn { margin-top: 16px; }
 
-.share p { color: var(--muted); }
-.share .btn { margin-top: 16px; }
+/* Способи допомогти без реквізитів */
+.ways { display: grid; gap: 20px; }
+.help:not([hidden]) ~ .ways,
+.intl:not([hidden]) ~ .ways { margin-top: 20px; }
+.way { display: flex; flex-direction: column; align-items: flex-start; }
+.way .panel__title { margin-bottom: 10px; }
+.way p { flex-grow: 1; color: var(--muted); }
+.way .btn { margin-top: 20px; }
+@media (min-width: 900px) {
+  .ways { grid-template-columns: repeat(3, 1fr); }
+}
 
 /* Міжнародні платежі (згорнутий блок) */
 .intl {
